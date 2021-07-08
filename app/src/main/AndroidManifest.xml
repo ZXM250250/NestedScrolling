@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nestedscrollingdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NestedScrollingDemo">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--NestedScrolling相关-->
+        <activity android:name=".ui.nested.NestedTraditionActivity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.nested.NestedScrollingParentActivity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.nested.NestedScrollingParent2Activity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.nested.NestedScrolling2DemoActivity"
+            android:launchMode="singleTop"/>
+
+
+        <!--CoordinatorLayout相关-->
+        <activity android:name=".ui.cdl.CoordinatorLayoutActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
+
+        <activity android:name=".ui.cdl.CoordinatorLayoutDemo1Activity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.cdl.CoordinatorLayoutDemo2Activity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.cdl.CoordinatorLayoutDemo3Activity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.cdl.CoordinatorLayoutDemo4Activity"
+            android:launchMode="singleTop"/>
+
+        <!--CoordinatorLayout与AppBar相关-->
+        <activity android:name=".ui.abl.CdlWithAppBarActivity"
+            android:launchMode="singleTop"/>
+
+        <!--CoordinatorLayout与AppBar及CollapsingToolbarLayout-->
+        <activity android:name=".ui.abl.CdlWithAppBarWithCollActivity"
+            android:launchMode="singleTop"/>
+    </application>
+
+</manifest>
