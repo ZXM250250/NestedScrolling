@@ -3,6 +3,7 @@ package com.example.nestedscrollingdemo.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -123,7 +124,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        mCanScrollDistance = mTopView.getMeasuredHeight() - getResources().getDimension(R.dimen.normal_title_height);
+        mCanScrollDistance = mTopView.getMeasuredHeight() -  300;          //getResources().getDimension(R.dimen.normal_title_height);
     }
 
     @Override
@@ -131,10 +132,12 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
         if (y < 0) {
             y = 0;
         }
+        Log.d("view","移动的位置"+getY());
         if (y > mCanScrollDistance) {
             y = (int) mCanScrollDistance;
         }
         if (mScrollChangeListener != null) {
+          //  Log.d("测试","移动的位置"+mCanScrollDistance);
             mScrollChangeListener.onScroll(y / mCanScrollDistance);
         }
         if (getScrollY() != y) super.scrollTo(x, y);

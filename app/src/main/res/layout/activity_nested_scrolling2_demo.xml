@@ -12,14 +12,14 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_background"/>
 
-    <!--标题栏-->
-    <include layout="@layout/layout_common_toolbar"/>
 
+    <include layout="@layout/layout_common_toolbar"/>
     <!--嵌套滑动父控件-->
     <com.example.nestedscrollingdemo.view.StickyNavLayout
         android:id="@+id/sick_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!--标题栏-->
 
         <!--透明TopView-->
         <View
